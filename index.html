@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breanna Jessie Frazier</title>
+<meta name="description" content="Breanna Jessie Frazier builds tools that turn messy, real-world work into clean, labeled data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* The Book's world: a black void, vellum text, and gilt for every accent and labeling box. */
+  --paper: #0f0e0c;
+  --sheet: #1a1815;
+  --ink: #ece4d2;
+  --muted: #a69d8b;
+  --rule: #34302a;
+  --pen: #d9b45a;
+  --label: #d9b45a;
+  --label-soft: rgba(217, 180, 90, .08);
+  --void: #000;
+  --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--body); }
+img, video { max-width: 100%; height: auto; display: block; }
+video { width: 100%; }
+a { color: var(--pen); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--label); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+header { padding: 56px 0 44px; border-bottom: 1px solid var(--rule); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.kicker { font: 500 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+h1 { font: 500 clamp(46px, 7vw, 78px)/1.02 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+h1 .goes { font-style: italic; color: var(--pen); }
+.lede { max-width: 58ch; font-size: 19px; line-height: 1.55; margin: 22px 0 0; }
+.contact { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 24px; font: 14px/1.4 var(--mono); color: var(--muted); }
+.contact a { color: var(--ink); }
+.cover { background: var(--void); border-radius: 12px; padding: 14px; border: 1px solid var(--rule); }
+
+section { padding: 56px 0; border-bottom: 1px solid var(--rule); }
+h2 { font: 500 44px/1.1 var(--display); color: var(--ink); margin: 0 0 8px; text-wrap: balance; }
+h3 { font: 600 21px/1.3 var(--body); margin: 0; }
+.sub { color: var(--muted); margin: 0 0 30px; max-width: 64ch; }
+p { margin: 0 0 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
+.tag { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 5px 7px; border: 1px solid var(--rule); border-radius: 3px; color: var(--muted); background: var(--sheet); }
+.pattern { margin: 14px 0 0; padding: 12px 14px; border: 1.5px dashed var(--label); background: var(--label-soft); border-radius: 4px; font-size: 15px; }
+.pattern b { font: 600 11px/1 var(--mono); letter-spacing: .07em; text-transform: uppercase; display: block; margin-bottom: 6px; color: var(--label); }
+ul.points { margin: 0; padding-left: 18px; }
+ul.points li { margin-bottom: 7px; }
+
+figure { margin: 0; }
+figcaption { font: 12.5px/1.45 var(--mono); color: var(--muted); margin-top: 8px; }
+.dark { background: var(--void); border-radius: 10px; overflow: hidden; border: 1px solid var(--rule); }
+.shot { border-radius: 10px; overflow: hidden; border: 1px solid var(--rule); background: var(--sheet); }
+
+/* The Book */
+.book-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 36px; align-items: start; }
+.compare { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 34px; }
+.compare figure > div { aspect-ratio: 4 / 3.3; }
+.compare img { width: 100%; height: 100%; object-fit: cover; }
+.compare .ink img { object-position: center 40%; }
+.compare.motion { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); margin-top: 18px; }
+.compare.motion figure > div { aspect-ratio: auto; }
+.labeler { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; margin-top: 34px; align-items: center; }
+.measured { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 28px; margin-top: 34px; align-items: start; }
+.measured .alpha { max-height: 520px; overflow: hidden; }
+.strip { margin-top: 18px; }
+
+/* Project grid */
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.proj { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.proj p { font-size: 15px; margin: 0; }
+.proj .pic { margin-top: 6px; }
+.phone { max-width: 260px; margin: 6px auto 0; border-radius: 22px; overflow: hidden; border: 6px solid #1b1f24; }
+
+/* Shift Stats sample, in the app's own clipboard style */
+.ss { --bg: #e9e6df; --surface: #f8f6f1; --sunk: #dfdbd2; --line: #d3cec3; --sh1: #4a6a8c; --sh2: #2f7d57; --sh3: #b8701a; --kraft: #f2c230;
+      background: var(--bg); border-radius: 12px; padding: 12px; font: 13px/1.4 "IBM Plex Sans", Arial, sans-serif; color: #22262b; }
+.ss .tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 3px; border-radius: 9px; background: var(--sunk); margin-bottom: 10px; }
+.ss .tabs span { text-align: center; padding: 5px 0; border-radius: 7px; color: #4b5058; font-weight: 500; }
+.ss .tabs .on { background: var(--surface); color: #22262b; box-shadow: 0 0 0 1px var(--line); }
+.ss .list { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.ss .row { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 8px; padding: 10px; border-top: 1px solid var(--line); }
+.ss .row:first-child { border-top: 0; }
+.ss .big { font-size: 18px; font-weight: 600; color: var(--c); line-height: 1.1; }
+.ss .facts { color: #4b5058; font-variant-numeric: tabular-nums; }
+.ss .facts b { color: #22262b; }
+.ss .bar { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.ss .track { position: relative; flex: 1; height: 7px; border-radius: 4px; background: var(--sunk); overflow: hidden; }
+.ss .fill { position: absolute; inset: 0 auto 0 0; background-color: var(--kraft); background-image: linear-gradient(90deg, rgba(90,68,0,.22) 1px, transparent 1px); background-size: 7px 100%; }
+.ss .val { min-width: 5.4em; text-align: right; font-size: 12px; color: #4b5058; font-variant-numeric: tabular-nums; }
+
+/* Tech history */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 14px; padding: 13px 0; border-top: 1px solid var(--rule); }
+.timeline li:first-child { border-top: 0; padding-top: 0; }
+.when { font: 12.5px/1.6 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.timeline strong { display: block; font-weight: 600; }
+.timeline span.d { color: var(--muted); font-size: 15px; }
+.traits { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.traits span { border: 1.5px dashed var(--label); background: var(--label-soft); padding: 6px 10px; border-radius: 3px; font-size: 14.5px; }
+.ctpe { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+.ctpe .ex { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 18px; font: 14px/1.55 var(--mono); }
+.ctpe .code { color: var(--pen); }
+.ctpe .say { color: var(--ink); font-family: var(--body); font-size: 15px; margin-top: 10px; }
+
+footer { padding: 36px 0 56px; font: 13px/1.6 var(--mono); color: var(--muted); }
+
+@media (max-width: 880px) {
+  .hero, .book-intro, .compare, .labeler, .measured, .two, .ctpe { grid-template-columns: 1fr; }
+  .projects { grid-template-columns: 1fr; }
+  .cover { max-width: 420px; }
+}
+@media (max-width: 420px) {
+  .wrap { padding: 0 16px; }
+  .timeline li { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hero">
+    <div>
+      <p class="kicker">Goodyear, Arizona</p>
+      <div class="contact" style="margin:0 0 20px">
+        <a href="tel:+16025243842">(602) 524-3842</a>
+        <a href="mailto:b.jessiefrazier@gmail.com">b.jessiefrazier@gmail.com</a>
+      </div>
+      <h1>Breanna Jessie Frazier</h1>
+      <p class="lede">I build tools that turn messy, real-world work into clean data: freight counts on a dock, shift reports, a music library, and my own handwriting down to the single pen stroke. Each one started with a pattern I noticed and wanted to pin down.</p>
+    </div>
+    <figure class="cover"><img src="img/book-cover.jpg" alt="The Book: a leather-bound book with a gold compass star on the cover, floating in a black space" width="760" height="700"></figure>
+  </div>
+</header>
+
+<main>
+<section id="the-book">
+  <div class="wrap">
+    <div class="book-intro">
+      <div>
+        <p class="kicker">Current project</p>
+        <h2>The Book</h2>
+        <div class="tags"><span class="tag">Data labeling tool</span><span class="tag">Pen data</span><span class="tag">3D</span></div>
+        <p>A skeuomorphic notebook that looks and feels like a thick vintage book. I write in it with a drawing tablet, and it records every part of handwriting that words on paper don't show, then lets me see it as graphs and in 3D. The pages keep the grooves the pen pressed in, and ink bleeds through to the back of the page.</p>
+        <p>It's a data labeling tool in its own right: after I write, I tell it what each word and letter actually says, so every stroke ends up tied to its correct label.</p>
+        <div class="pattern"><b>The pattern I found</b>Once my letters were labeled, I could lay every copy of a letter on top of the others. Each of my letters keeps the same pressure shape, whatever the speed or size I write it at.</div>
+      </div>
+      <figure class="dark"><video src="vid/book-page-turn.mp4" poster="vid/book-page-turn.jpg" autoplay muted loop playsinline preload="auto" aria-label="Pages of The Book turning, from a drawing to a handwritten page"></video></figure>
+    </div>
+
+    <div class="compare">
+      <figure><div class="dark"><img src="img/book-3d.jpg" alt="The same page lifted into 3D, each stroke a curve with pressure as height, coloured from light blue to red" width="1290" height="985"></div>
+        <figcaption>A page in 3D</figcaption></figure>
+      <figure><div class="dark"><img src="img/book-janus-time-pressure.jpg" alt="The Janus drawing in 3D with time across, pressure up, and left-right out of the page" width="1150" height="950"></div>
+        <figcaption>Janus, as time and pressure</figcaption></figure>
+    </div>
+
+    <div class="compare motion">
+      <figure><div class="dark"><video src="vid/book-3d-write.mp4" poster="vid/book-3d-write.jpg" autoplay muted loop playsinline preload="auto" aria-label="A handwritten page replaying itself along its 3D curves"></video></div></figure>
+      <figure><div class="dark"><video src="vid/book-janus-turn.mp4" poster="vid/book-janus-turn.jpg" autoplay muted loop playsinline preload="auto" aria-label="The Janus drawing seen head-on in 3D, then turned to show its pressure"></video></div></figure>
+    </div>
+
+    <div class="labeler">
+      <figure><div class="dark"><img src="img/book-labeler.jpg" alt="The Label tab beside the open book: the word The, with each letter T, h, e colour-coded on the ink" width="1040" height="1000"></div></figure>
+      <div>
+        <h3>The labeler</h3>
+        <ul class="points" style="margin-top:12px">
+          <li>It finds the lines and words on the page. Then I type what each word says, and each letter gets its share of the ink, shown in its own color.</li>
+          <li>Split, Cut, Merge, and Wrong line fix words that were grouped wrong. A ring on the pen lets me hand a stray stroke to the right letter.</li>
+          <li>"Could also be read as" keeps a second reading when a letter is truly unclear.</li>
+          <li>It keeps count across the book: every word and letter I've labeled, and how far each copy strays from my usual shape.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="measured">
+      <figure><div class="dark alpha"><img src="img/book-alphabet.jpg" alt="An alphabet practice page on a dark background, with a small red pressure graph under every letter" width="1100" height="1540"></div>
+        </figure>
+      <div>
+        <h3>Every stroke, measured</h3>
+        <p style="margin-top:12px">The Book colors ink by pressure, speed, or tilt, draws graphs under each line, and plays a page back at the pace it was written. Everything exports as SVG, PDF, or JPG, with a key under each picture saying exactly what it shows.</p>
+        <figure class="strip"><div class="dark"><img src="img/book-time.jpg" alt="A long strip graph of one page over time, pressure in red and speed in blue" width="1400" height="150"></div></figure>
+        <figure class="strip"><div class="dark"><video src="vid/book-layers.mp4" poster="vid/book-layers.jpg" autoplay muted loop playsinline preload="auto" aria-label="A drawing switching between ink colored by pressure and a close look at its graph"></video></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ctpe">
+  <div class="wrap ctpe">
+    <div>
+      <h2>Code to Plain English</h2>
+      <p>A program I made that reads code back to me one line at a time, in plain spoken English, so I can follow exactly what my apps are doing. It runs as an app on my phone and on my desktop. Right now I'm using it to learn to write brushes for The Book.</p>
+    </div>
+    <div class="ex" aria-label="Example of a line of code and its plain English reading">
+      <div class="code">if (count !== manifest) flag(row);</div>
+      <div class="say">"If the count doesn't match the manifest, flag this row."</div>
+    </div>
+  </div>
+</section>
+
+<section id="more">
+  <div class="wrap">
+    <h2>More things I've built</h2>
+    <p class="sub">Each one came out of something I kept running into at work or at home.</p>
+    <div class="projects">
+      <article class="proj">
+        <h3>LPT</h3>
+        <div class="tags"><span class="tag">Mobile web app</span><span class="tag">Built in week one</span></div>
+        <p>About a week after starting a warehouse job, I built LPT to count freight by SKU as a trailer is unloaded. You set each pallet's tie and high, tap Count, and it keeps a running total against the manifest. Two coworkers started using it on their own.</p>
+        <div class="pattern"><b>The pattern I noticed</b>The manifests were off roughly half the time, and pay was split by a percentage with no box count behind it.</div>
+        <figure class="pic"><div class="phone"><img src="img/lpt.jpg" alt="LPT on a phone: 403 of 420 boxes counted, with four SKUs and their pallet counts" width="600" height="1030"></div>
+          <figcaption style="text-align:center">Sample numbers</figcaption></figure>
+      </article>
+
+      <article class="proj">
+        <h3>Shift Stats</h3>
+        <div class="tags"><span class="tag">Report tracker</span><span class="tag">Charts</span></div>
+        <p>When I was a lead, every shift posted a start-of-shift and end-of-day report in a group chat. Shift Stats logs those reports so each shift can be compared with the others over time: crew size, containers finished, and the trailers left for the next shift.</p>
+        <div class="pattern"><b>The pattern I was after</b>How each shift's containers per person moved from week to week, side by side, instead of one report at a time.</div>
+        <figure class="pic"><div class="ss" aria-label="Shift Stats sample: three shift rows with containers per person bars">
+          <div class="tabs"><span class="on">Reports</span><span>Compare</span><span>Add</span></div>
+          <div class="list">
+            <div class="row" style="--c:var(--sh1)"><div class="big">1st</div><div><div class="facts"><b>14</b> crew · <b>7</b> containers · <b>1</b> left over</div><div class="bar"><div class="track"><div class="fill" style="width:50%"></div></div><span class="val">0.50 / person</span></div></div></div>
+            <div class="row" style="--c:var(--sh2)"><div class="big">2nd</div><div><div class="facts"><b>11</b> crew · <b>6</b> containers · <b>2</b> left over</div><div class="bar"><div class="track"><div class="fill" style="width:55%"></div></div><span class="val">0.55 / person</span></div></div></div>
+            <div class="row" style="--c:var(--sh3)"><div class="big">3rd</div><div><div class="facts"><b>12</b> crew · <b>8</b> containers · <b>0</b> left over</div><div class="bar"><div class="track"><div class="fill" style="width:67%"></div></div><span class="val">0.67 / person</span></div></div></div>
+          </div>
+        </div>
+          <figcaption>Sample numbers</figcaption></figure>
+      </article>
+
+      <article class="proj">
+        <h3>Playedlist</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Terminal app</span></div>
+        <p>A Python terminal app for my audio library. Paste a playlist link, pick a category like Music, Audiobooks, or Lectures, and it saves the audio into organized folders. It also has search, title and artist editing, and batch delete.</p>
+        <div class="pattern"><b>The pattern I built around</b>Playlists keep growing, so it keeps an archive of what it has already saved and skips repeats.</div>
+        <figure class="pic"><div class="shot" style="background:#0c0c0c;border-color:#2b2b2b"><img src="img/playedlist.jpg" alt="Playedlist in a terminal: main menu, choose category, then Search, Edit and Manage for Music" width="1100" height="1019"></div></figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="wrap">
+    <div style="max-width:760px">
+      <h2>My history in tech</h2>
+      <p class="sub">I've been the person who fixes things for years.</p>
+      <ul class="timeline">
+        <li><span class="when">2019–20</span><div><strong>Tech support and triage, DISH Network</strong><span class="d">Took tech support calls, found the real problem, and fixed it on the spot or sent it to the right team with clear notes.</span></div></li>
+        <li><span class="when">2022–23</span><div><strong>Sales rep, Cricket Wireless</strong><span class="d">Troubleshot customers' phones and moved their contacts, photos, and data over to new phones during upgrades.</span></div></li>
+        <li><span class="when">2026</span><div><strong>Lead, distribution center</strong><span class="d">Built LPT and Floor Tracker for the crew. Features from Floor Tracker went into the company's management dashboard. Trained 30+ new hires.</span></div></li>
+        <li><span class="when">Now</span><div><strong>IT Support Professional Certificate, Coursera</strong><span class="d">Finished Technical Support Fundamentals and The Bits and Bytes of Computer Networking; working through the rest.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Breanna Jessie Frazier · Goodyear, AZ · <a href="mailto:b.jessiefrazier@gmail.com">b.jessiefrazier@gmail.com</a></div>
+</footer>
+</body>
+</html>
